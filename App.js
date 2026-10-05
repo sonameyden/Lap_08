@@ -1,15 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { useState } from 'react';
+import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
+
 
 export default function App() {
+  const [likes, setLikes] = useState(0);
   return (
     <View style={styles.container}>
       <View style={styles.card}>
-        <Image source={require('./assets/icon.png')} style={styles.avatar} />
-        <Text style={styles.name}>Your Name</Text>
+        <Image source={require('./assets/me.jpg')} style={styles.avatar} />
+        <Text style={styles.name}>Sonam Eyden</Text>
         <Text style={styles.subtitle}>BE Information and Technology · CST</Text>
         <Text style={styles.bio}>
-          One sentence about yourself and the app you want to build.
+          I am building an AURA app 
         </Text>
       </View>
       <StatusBar style="auto" />
